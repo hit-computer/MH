@@ -35,8 +35,8 @@ for i in range(iter):
 	u = random.uniform(0.0,1.0)
 	if u < min(P[y]*G[x]/(P[x]*G[y]),1):
 		x = y
-	if i > 2000:
-		#print x
+	if i > 2000: #因为马尔科夫链需要转移一定次数才能收敛，所以也需要转移一定次数后才保留结果
+#print x
 		res_seq.append(x)
 #------------------------------------------------------#
 
